@@ -1,0 +1,15 @@
+<div class="sidebar-container">
+  <mat-list>
+    @for (folder of folders; track folder) {
+    <mat-list-item class="sidebar-folde">
+      <div matListItemTitle>{{folder.name}}</div>
+    </mat-list-item>
+    @for (item of folder.items; track item) {
+    <mat-list-item class="sidebar-item" (click)="navigateTo(item.path!)">
+      <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+      <div matListItemTitle> {{item.name}} </div>
+    </mat-list-item> }
+    <mat-divider></mat-divider>
+    }
+  </mat-list>
+</div>

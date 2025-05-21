@@ -1,0 +1,27 @@
+<div class="main-page-container">
+  <!-- <div class="left-container">
+    <app-side-bar></app-side-bar>
+  </div>
+  <div class="right-container">
+    <div class="top-container">
+      <app-tool-bar></app-tool-bar>
+    </div>
+    <div class="central-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div> -->
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" opened class="left-container" style="border-radius: 0">
+      <app-side-bar></app-side-bar>
+    </mat-sidenav>
+  
+    <mat-sidenav-content class="right-container">
+      <div class="top-container">
+        <app-tool-bar></app-tool-bar>
+      </div>
+      <div class="central-container">
+        <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
